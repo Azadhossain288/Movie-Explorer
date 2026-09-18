@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function MovieCard({ show, onSelect }) {
-  // কিছু API-তে ইমেজ বা রেটিং না থাকতে পারে, তাই ফলব্যাক (fallback) দেওয়া ভালো
+  
   const image = show.image?.medium || 'https://via.placeholder.com/210x295?text=No+Image';
   const rating = show.rating?.average || 'N/A';
   const premiered = show.premiered ? show.premiered.split('-')[0] : 'N/A';

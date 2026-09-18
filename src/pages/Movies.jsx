@@ -8,7 +8,7 @@ export default function Movies() {
   const [selectedShow, setSelectedShow] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ডিফল্ট শো ফেচ করা
+  
   useEffect(() => {
     fetch('https://api.tvmaze.com/shows')
       .then((res) => res.json())
@@ -22,13 +22,13 @@ export default function Movies() {
       });
   }, []);
 
-  // সার্চ হ্যান্ডলার
+  
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchTerm(query);
 
     if (query.trim() === '') {
-      // যদি ইনপুট খালি থাকে, তবে সব শো আবার নিয়ে আসা
+    
       setLoading(true);
       fetch('https://api.tvmaze.com/shows')
         .then((res) => res.json())

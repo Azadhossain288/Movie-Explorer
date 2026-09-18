@@ -7,7 +7,7 @@ export default function MovieModal({ show, onClose }) {
   const rating = show.rating?.average || 'N/A';
   const premiered = show.premiered || 'N/A';
   const genres = show.genres ? show.genres.join(', ') : 'N/A';
-  // HTML ট্যাগগুলো রিমুভ করার জন্য clean summary
+ 
   const summary = show.summary ? show.summary.replace(/<[^>]*>?/gm, '') : 'No description available.';
 
   return (
